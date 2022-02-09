@@ -26,7 +26,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="test">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
+  <meta name="google-signin-client_id" content="CLIENT_ID" />
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
@@ -35,8 +35,9 @@
 </head>
 
 <body>
-  <script src="https/www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-  <script src="https/www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <!-- <script src="https/www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https/www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script> 
+  -->
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyAmqgM-Z2-4XHyA4apy2VqShoqbBE6K3rY",
@@ -46,7 +47,7 @@
       messagingSenderId: "974039335638",
       appId: "1:974039335638:web:6dc8e05bea34d659e57f77"
     };
-    firebase.initializeApp(firebaseConfig);
+    
   </script>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
