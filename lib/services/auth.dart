@@ -3,7 +3,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
   //stream current user
-  final useStream = FirebaseAuth.instance.authStateChanges();
+  final userStream = FirebaseAuth.instance.authStateChanges();
   final user = FirebaseAuth.instance.currentUser;
 
   Future<void> anonLogin() async {
@@ -21,18 +21,6 @@ class AuthService {
   Future<void> googleLogin() async {
     try {
       final userCredential = await FirebaseAuth.instance.signInWithPopup(GoogleAuthProvider());
-
-      final googleUser = await GoogleSignIn(clientId: "test-dd24d").signIn();
-
-      if (googleUser == null) return;
-
-      final googleAuth = await googleUser.authentication;
-      final authCredential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken,
-      );
-
-      await FirebaseAuth.instance.signInWithCredential(authCredential);
     } on FirebaseAuthException catch (e) {
       // do nothing ???
     }
