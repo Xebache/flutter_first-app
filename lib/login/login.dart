@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:test/services/auth.dart';
-import 'package:test/shared/button/login_button.dart';
-import 'package:test/shared/icon/my_flutter_app_icons.dart';
+import 'package:test/shared/login_button.dart';
+import 'package:test/shared/my_flutter_app_icons.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);

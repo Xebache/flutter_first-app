@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test/services/models.dart';
+import 'package:test/topics/topic_progress.dart';
 import 'package:test/topics/topic_screen.dart';
 
 class TopicItem extends StatelessWidget {
@@ -42,7 +43,8 @@ class TopicItem extends StatelessWidget {
                                 fontFamily: GoogleFonts.poppins().fontFamily),
                             overflow: TextOverflow.fade,
                             softWrap: false,
-                          )))
+                          ))),
+                  Flexible(child: TopicProgress(topic: topic))
                 ],
               )),
         ));

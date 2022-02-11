@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test/services/firestore.dart';
 import 'package:test/services/models.dart';
-import 'package:test/shared/loader/loader.dart';
+import 'package:test/shared/shared.dart';
+import 'package:test/topics/topic_drawer.dart';
 import 'package:test/topics/topic_item.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
-import 'package:top_snackbar_flutter/tap_bounce_container.dart';
-import 'package:top_snackbar_flutter/top_snack_bar.dart';
-
-import '../shared/nav/bottom_nav.dart';
 
 class TopicsScreen extends StatelessWidget {
   const TopicsScreen({Key? key}) : super(key: key);
@@ -30,6 +27,7 @@ class TopicsScreen extends StatelessWidget {
               appBar: AppBar(
                 title: const Text('Topics'),
               ),
+              drawer: TopicDrawer(topics: topics),
               body: GridView.count(
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,

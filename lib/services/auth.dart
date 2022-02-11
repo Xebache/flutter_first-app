@@ -20,7 +20,7 @@ class AuthService {
 
   Future<void> googleLogin() async {
     try {
-      final userCredential = await FirebaseAuth.instance.signInWithPopup(GoogleAuthProvider());
+      await FirebaseAuth.instance.signInWithPopup(GoogleAuthProvider());
     } on FirebaseAuthException catch (e) {
       // do nothing ???
     }
